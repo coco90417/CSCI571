@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="myhomework1.css">
+        <title>hw1</title>
+    </head>
+    <body>
+        <div id="patient_info">
+            <h1>Welcome to my cancer genome! <img src="dna.png" width="50" height="50"></h1>
+            <hr>
+            <h2>Please provide your personal information. <img src="person.png" width="50" height="50"></h2>
+            <form name="personal_info_form" id="first-form">
+                <ul class="coco_info_style">
+                    <li><label>Full name <span class="required">*</span></label><input type="text" id="first" class="field-divided" placeholder="First" value="" />&nbsp;<input type="text" id="last" class="field-divided" placeholder="Last" value="" />
+                    </li>
+                    <li><label>Birth <span class="required">*</span></label><input  type="text" id="birth-month" class="field-divided" placeholder="Month" value="" maxlength="2"/>&nbsp;<input  type="text" id="birth-day" class="field-divided" placeholder="Day" value="" maxlength="2"/>&nbsp;<input  type="text" id="birth-year" class="field-divided" placeholder="Year" value="" maxlength="4"/>
+                    </li>
+                    <li><label>Telephone<span class="required">*</span></label><input type="text" class="tel-number-field" id="tel-1" value="" maxlength="3" />-<input type="text" class="tel-number-field" id="tel-2" value="" maxlength="3"  />-<input type="text" class="tel-number-field" id="tel-3" value="" maxlength="4"  />
+                    </li>
+                    <li>
+                        <label>Email <span class="required">*</span></label>
+                        <input id="email" class="field-long" />
+                    </li>
+                    <li>
+                        <form id="gender-form">
+                        <label>Gender<span class="required">*</span></label>
+                        <input type="radio" id="rb1" name="gender" value="Female">
+                        <label for="rb1">Female</label>
+                        <input type="radio" id="rb2" name="gender" value="Male">
+                        <label for="rb2">Male</label>
+                        <input type="radio" id="rb3" name="gender" value="Other">
+                        <label for="rb3">Other</label>
+                        </form>
+                    </li>
+                    <li>
+                        <form id="insurance-form">
+                        <label>Insurance status</label>
+                        <input type="radio" id="rb4" name="insurance" value="Ensured">
+                        <label for="rb4">Ensured</label>
+                        <input type="radio" id="rb5" name="insurance" value="Not ensured">
+                        <label for="rb5">Not ensured</label>
+                        <input type="radio" id="rb6" name="insurance" value="Other">
+                        <label for="rb6">Other</label>
+                        </form>
+                    </li>
+                    <li>
+                        <label>Ethnicity</label>
+                        <select id="ethnicity" class="field-select">
+                            <option value="---" >---</option>
+                            <option value="Asian" >Asian</option>
+                            <option value="Black">Black</option>
+                            <option value="Indian">Indian</option>
+                            <option value="Hispanic">Hispanic</option>
+                            <option value="White">White</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>Nationality</label>
+                        <select id="nationality" class="field-select">
+                            <option value="---" >---</option>
+                            <option value="China">China</option>
+                            <option value="Indian">Indian</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </li> 
+                    <li>
+                        <input type="button" onclick="resetOne()" value="Reset" /> <input type="button" onclick="finishFirst()" value="Next"/>
+                    </li>
+
+                </ul>
+            </form>
+        </div>
+        <div id="medical_info" style="visibility: hidden;">
+            <h2>Please also provide your medical information. <img src="medicine.png" width="50" height="50"></h2>
+            <hr>
+            <form name="medical_info_form" id="second-form">
+                <ul class="coco_info_style">
+                    <li><label>Diagnosis <span class="required">*</span></label><input id="diagnosis-month" type="text" class="field-divided" placeholder="Month" maxlength="2" />&nbsp;<input id="diagnosis-year" type="text" class="field-divided" placeholder="Year" maxlength="4" />
+                    </li>
+                    <li>
+                        <form id="status-form">
+                        <label>Cancer status</label>
+                        <input type="radio" id="rb7" name="status" value="Primary">
+                        <label for="rb7">Primary</label>
+                        <input type="radio" id="rb8" name="status" value="Recur">
+                        <label for="rb8">Recur</label>
+                        <input type="radio" id="rb9" name="status" value="Other">
+                        <label for="rb9">Other</label>
+                        </form>
+                    </li>
+                    <li>
+                        <form id="subtype-form">
+                        <label>I know my cancer subtype</label>
+                        <input type="radio" id="rb10" name="knowsubtype" value="Yes">
+                        <label for="rb10">Yes</label>
+                        <input type="radio" id="rb11" name="knowsubtype" value="No">
+                        <label for="rb11">No</label>
+                        <input type="radio" id="rb12" name="knowsubtype" value="Not sure">
+                        <label for="rb12">Not sure</label>
+                        </form>
+                    </li>
+                    <li id="subtype-list" style="visibility: hidden;">
+                        <label>Cancer subtype</label>
+                        <select id="subtype" class="field-select">
+                            <option value="Brain">Brain</option>
+                            <option value="Breast">Breast</option>
+                            <option value="Cervical">Cervical</option>
+                            <option value="Leukemia">Leukemia</option>
+                            <option value="Liver">Liver</option>
+                            <option value="Lung">Lung</option>
+                            <option value="Kidney">Kidney</option>
+                            <option value="Prostate">Prostate</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </li>
+                    <li>
+                        <form id="grade-form">
+                        <label>I know my cancer grade</label>
+                        <input type="radio" id="rb13" name="knowgrade" value="Yes">
+                        <label for="rb13">Yes</label>
+                        <input type="radio" id="rb14" name="knowgrade" value="No">
+                        <label for="rb14">No</label>
+                        <input type="radio" id="rb15" name="knowgrade" value="Not sure">
+                        <label for="rb15">Not sure</label>
+                        </form>
+                    </li>
+                    <li id="grade-list" style="visibility: hidden;">
+                        <label>Cancer grade</label>
+                        <select id="grade" class="field-select">
+                            <option value="I">I</option>
+                            <option value="II">II</option>
+                            <option value="III">III</option>
+                            <option value="IV">IV</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </li>
+                    <li>
+                        <form id="genome-form">
+                        <label>Genomic analysis performed<span class="required">*</span></label>
+                        <input type="checkbox" id="cb1" name="genome" value="DNA sequencing">
+                        <label for="cb1">DNA sequencing</label>
+                        <input type="checkbox" id="cb2" name="genome"value="RNA sequencing">
+                        <label for="cb2">RNA sequencing</label>
+                        <input type="checkbox" id="cb3" name="genome" value="protein sequencing">
+                        <label for="cb3">protein sequencing</label>
+                        <input type="checkbox" id="cb4" name="genome" value="Other">
+                        <label for="cb4">Other</label>
+                        </form>
+                    </li>
+                    <li>
+                        <label>Genetic mutations<span class="required">*</span></label>
+                        <textarea name="mutation" id="mutation" class="field-long field-textarea" value="" placeholder="This format is denoted by the author of ANNOVAR package. Example of one row: '1  12919840    12919840    T   C'"></textarea>
+                    </li>
+                    <li>
+                        <form id="treatment-form">
+                        <label>Treatment received</label>
+                        <input type="checkbox" id="cb5" name="treatment" value="Radial therapy">
+                        <label for="cb5">Radial therapy</label>
+                        <input type="checkbox" id="cb6" name="treatment" value="Chemal therapy / Targeted therapy">
+                        <label for="cb6">Chemal therapy / Targeted therapy</label>
+                        <input type="checkbox" id="cb7" name="treatment" value="Surgery">
+                        <label for="cb7">Surgery</label>
+                        </form>
+                    </li>
+                    <li>
+                        <form id="future-form">
+                        <label>Future update</label>
+                        <input type="checkbox" id="cb8" name="future" value="Please send me emails for future update/news">
+                        <label for="cb8">Please send me emails for future update/news</label>
+                        <input type="checkbox" id="cb9" name="future"value="Please text me for future update/news">
+                        <label for="cb9">Please text me for future update/news</label>
+                        <input type="checkbox" id="cb10" name="future" value="Please call me for future update/news">
+                        <label for="cb10">Please call me for future update/news</label>
+                        </form>
+                    </li>
+                    <li>
+                        <form id="consent-form">
+                        <label>Patient consent for cancer research</label>
+                        <input type="checkbox" id="cb11" name="consent" value="You may use my genetic information">
+                        <label for="cb11">You may use my genetic information</label>
+                        <input type="checkbox" id="cb12" name="consent"value="You may use use my medical information">
+                        <label for="cb12">You may use use my medical information</label>
+                        <input type="checkbox" id="cb13" name="consent" value="You may use my personal information">
+                        <label for="cb13">You may use my personal information</label>
+                        </form>
+                    </li>
+                    <li>
+                        <input type="button" value="Previous" onclick="backOne()" /> <input type="button" onclick="resetTwo()" value="Reset" /> <input type="button" value="Submit" onclick="finishSecond()"/>
+                    </li>
+                </ul>
+            </form>
+            <hr/>
+        </div>
+        <div id="report_1" style="visibility: hidden;">
+            <ul class="coco_info_style" name="report-1">
+            <h1>Please review your information below</h1>
+            <hr>
+            <h2>Personal information <img src="person.png" width="50" height="50"></h2>
+            <li>
+                <table>
+                    <tr>
+                        <td>Full name</td>
+                        <td id="report-fullname" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Date of birth</td>
+                        <td id="report-birth" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Telephone</td>
+                        <td id="report-telephone" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td id="report-email" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td id="report-gender" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Insurance status</td>
+                        <td id="report-insurance" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Ethnithity</td>
+                        <td id="report-ethnicity" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Nationality</td>
+                        <td id="report-nationality" value=""></td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <input type="button" onclick="toReport2()" value="Next" />
+            </li>
+            </ul>
+            </hr>
+        </div>
+        <div id="report_2" style="visibility: hidden;">
+            <ul class="coco_info_style" name="report-2">
+            <h1>Please review your information below</h1>
+            <hr>
+            <h2>Medical information <img src="medicine.png" width="50" height="50"></h2>
+            <li>
+            <table id="form-2">
+                <tr>
+                    <td>Diagnostic date</td>
+                    <td id="report-dianostic" value=""></td>
+                </tr>
+                <tr>
+                    <td>Cancer status</td>
+                    <td id="report-status" value=""></td>
+                </tr>
+                <tr>
+                    <td>Known subtype</td>
+                    <td id="report-knowsubtype" value=""></td>
+                </tr>
+                <tr>
+                    <td>Subtype</td>
+                    <td id="report-subtype" value=""></td>
+                </tr>
+                <tr>
+                    <td>Known grade</td>
+                    <td id="report-knowgrade" value=""></td>
+                </tr>
+                <tr>
+                    <td>Cancer grader</td>
+                    <td id="report-grade" value=""></td>
+                </tr>
+                <tr>
+                    <td>Genomic analysis</td>
+                    <td id="report-genome" value=""></td>
+                </tr>
+                <tr>
+                    <td>Genetic mutations</td>
+                    <td id="report-mutation" value=""></td>
+                </tr>
+                <tr>
+                    <td>Treatment reiceved</td>
+                    <td id="report-treatment" value=""></td>
+                </tr>
+                <tr>
+                    <td>Future update</td>
+                    <td id="report-update" value=""></td>
+                </tr>
+                <tr>
+                    <td>Patient consent</td>
+                    <td id="report-consent" value=""></td>
+                </tr>
+            </table>
+        </li>
+        <li>
+            <input type="button" onclick="startAll()" value="Start another" />  <input type="button" onclick="backForm()" value="Back" />  <input type="button" onclick="modify()" value="Modify" />
+        </li>
+        </ul>
+        </hr>
+    </div>
+    </body>
+    <script src="myhomework1.js" type="text/javascript">
+    </script>
+</html>
+
+
+
+
+
+
+
+

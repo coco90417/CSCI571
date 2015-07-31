@@ -1,0 +1,65 @@
+body, html {
+  font-size: 100%;
+  font-family: sans-serif;
+  color: #31353d;
+  background-color: #eeeff7;
+}
+
+.required:before { content: '* '; color: "red"}
+
+
+a {
+  color: #435779;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+td {
+    padding-left:10px;
+    vertical-align:text-top;
+    font-size: 0.9em;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 300px;
+  padding-top: 50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+#menu {
+  left: -100%;
+  background: #FFF;
+  -webkit-transition: left 0.3s;
+  -moz-transition: left 0.3s;
+  transition: left 0.3s;
+}
+
+#menu form input {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 1em;
+  border-bottom: 1px solid #e0e6ef;
+}
+
+#menu form div input {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 1em;
+    border-bottom: 1px solid #e0e6ef;
+}
+
+#menu form .current {
+  box-shadow: inset 3px 0 #435779;
+}
+
+
+

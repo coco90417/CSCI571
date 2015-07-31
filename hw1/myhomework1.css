@@ -1,0 +1,171 @@
+body {
+    background: url("welcome_1.jpg");
+    background-repeat: no-repeat;
+    background-size: 5000px, 5000px, auto;
+}
+
+div {
+    position: absolute;
+    left: 500px;
+    top: 0px;
+}
+
+h1 {
+    color: white
+}
+
+h2 {
+    color: white
+}
+
+.coco_info_style {
+    margin:10px auto;
+    max-width: 400px;
+    padding: 5px 12px 10px 10px;
+    font: 6px;
+    color: white
+}
+.coco_info_style li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 8px 0 0 0;
+}
+.coco_info_style label{
+    margin:0 0 2px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+    color: white
+}
+
+
+.coco_info_style .tel-number-field{
+    width: 60px;
+    text-align: center;
+}
+
+
+.coco_info_style input[type=text],
+.coco_info_style input[type=number],
+.coco_info_style textarea,
+.coco_info_style .tel-number-field,
+.coco_info_style  select,
+.coco_info_style input[type=radio],
+.coco_info_style input[type=checkbox],
+.coco_info_style li table
+{
+    padding: 6px;
+    border:1px solid #BEBEBE;
+    -webkit-box-sizing: border-box;
+    -webkit-transition: all 0.50s ease-in-out;
+}
+.coco_info_style input[type=text]:focus,
+.coco_info_style input[type=number]:focus,
+.coco_info_style textarea:focus,
+.coco_info_style .tel-number-field:focus,
+.coco_info_style select:focus,
+.coco_info_style input[type=radio]:focus,
+.coco_info_style input[type=checkbox]:focus{
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+
+.coco_info_style .field-select{
+    width: 100%;
+}
+.coco_info_style .field-long{
+    width: 97%;
+}
+.coco_info_style .field-textarea{
+    height: 100px;
+}
+.coco_info_style .field-divided{
+    width: 32%;
+}
+
+.coco_info_style input[type=button]{
+    background: #4B99AD;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+    font: 10px;
+}
+.coco_info_style input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.coco_info_style .required{
+    color:red;
+}
+
+
+.coco_info_style input[type=radio], .coco_info_style input[type=checkbox] {
+    display:none;
+}
+
+
+.coco_info_style input[type=radio] + label:before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align:middle;
+    margin-right: 8px;
+    background-color: #aaa;
+    box-shadow: inset 0px 2px 2px rgba(0, 0, 0, .3);
+    border-radius: 8px;
+}
+
+.coco_info_style input[type=checkbox] + label:before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align:middle;
+    margin-right: 8px;
+    background-color: #aaa;
+    box-shadow: inset 0px 2px 2px rgba(0, 0, 0, .3);
+    border-radius: 4px;
+}
+
+.coco_info_style input[type=radio]:checked + label:before {
+    content: "\2022";
+    color:white;
+    background-color: #666;
+    font-size:1.8em;
+    text-align:center;
+    line-height:14px;
+    text-shadow:0px 0px 3px #eee;
+}
+
+.coco_info_style input[type=checkbox]:checked + label:before {
+    content:"\2714";
+    color:white;
+    background-color: #666;
+    text-align:center;
+    line-height:15px;
+    text-shadow:0px 0px 3px #eee;
+}
+
+
+table, tr , td{
+    border: 1px white;
+    color:white;
+}
+
+.coco_info_style li ,tr, td {
+    color: white;
+}
+
+
+
+
+
+
+
+

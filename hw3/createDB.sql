@@ -1,6 +1,6 @@
-drop database if exists hw4;
-create database hw4;
-use hw4;
+drop database if exists hw3;
+create database hw3;
+use hw3;
 
 drop table if exists Users;
 create table Users (
@@ -29,7 +29,7 @@ drop table if exists ProductCategory;
 create table ProductCategory (
     productcategoryid int(11) not null auto_increment,
     productcategoryname varchar(80) not null,
-    productcategorydescription varchar(2000),
+    productdescription varchar(2000),
     primary key (productcategoryid)
 );
 
@@ -89,13 +89,13 @@ insert into Users (username, password, usertype, firstname, lastname, age, salar
 values ("sales", "2222", "sales", "hui", "yang", 26, "100000");
 
 # ProductCategory
-insert into ProductCategory (productcategoryname, productcategorydescription)
+insert into ProductCategory (productcategoryname, productdescription)
 values ("DNA Sequencing", "Sequence your whole cancer genome");
-insert into ProductCategory (productcategoryname, productcategorydescription)
+insert into ProductCategory (productcategoryname, productdescription)
 values ("RNA Sequencing", "Sequence your whole cancer transcriptome");
-insert into ProductCategory (productcategoryname, productcategorydescription)
+insert into ProductCategory (productcategoryname, productdescription)
 values ("ChIP Sequencing", "Profile transcription factor binding sites in your whole genome");
-insert into ProductCategory (productcategoryname, productcategorydescription)
+insert into ProductCategory (productcategoryname, productdescription)
 values ("Targeted Sequencing", "Sequence the targeted genes in your cancer genome");
 
 # Product
@@ -177,5 +177,7 @@ values ("2", "1", "5");
 
 insert into OrderItems(orderid, count, productid)
 values ("3", "1", "16");
+
+
 
 
